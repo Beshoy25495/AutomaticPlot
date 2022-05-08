@@ -1,0 +1,60 @@
+<div class="profile-page">
+
+  <div class="user-info">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-xs-12 col-md-10 offset-md-1">
+          <img src="https://www.pngall.com/wp-content/uploads/4/Welcome-Design-PNG-Free-Download.png" class="user-img" />
+          <h4>{{ currentUser.userName }}</h4>
+          <p>{{ currentUser.bio }}</p>
+
+           <a [routerLink]="['/settings']"
+              [hidden]="!isUser"
+              class="btn btn-sm btn-outline-secondary action-btn">
+              <i class="ion-gear-a"></i> Edit Profile Settings
+            </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-xs-12 col-md-10 offset-md-1">
+        <div class="articles-toggle">
+          <form [formGroup]="authForm">
+            <fieldset [disabled]="true">
+              <fieldset class="form-group">
+                <input
+                  formControlName="firstName"
+                  placeholder="FirstName"
+                  class="form-control form-control-lg"
+                  type="text" />
+              </fieldset>
+              <fieldset class="form-group">
+                <input
+                  formControlName="lastName"
+                  placeholder="LastName"
+                  class="form-control form-control-lg"
+                  type="text" />
+              </fieldset>
+              <fieldset class="form-group">
+                <input
+                  formControlName="email"
+                  placeholder="Email"
+                  class="form-control form-control-lg"
+                  type="email" />
+              </fieldset>
+            </fieldset>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
